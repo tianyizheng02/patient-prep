@@ -56,8 +56,6 @@ export class Tab2Page {
 
   async onEventSelected(event) {
 
-    console.log(event)
-
     let start = moment(event.startTime).format('LLLL');
     let end = moment(event.endTime).format('LLLL');
 
