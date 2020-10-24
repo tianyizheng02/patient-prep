@@ -3,10 +3,10 @@ const { uniqueNamesGenerator, names } = require("unique-names-generator");
 const randomstring = require("randomstring");
 const count = process.argv.slice(2);
 
-genertator();
+generator();
 
-function genertator() {
-  if (count.length > 0 && count[0] > 1) {
+function generator() {
+  if (count.length > 0 && count[0] > 0) {
     for (let i = 0; i < count[0]; i++) {
       accountGenerator();
     }
