@@ -1,5 +1,13 @@
 # Patient-Prep
 
+## Ionic Setup Guide
+ 
+ 1. Clone the repo
+ 2. Navigate to the ***patient-prep-frontend*** directory
+ 3. Execute `npm install` to install dependencies
+ 4. Execute `ionic serve` to run the application on local host
+
+
 ## Firebase API (Database)
 
 Get all data:
