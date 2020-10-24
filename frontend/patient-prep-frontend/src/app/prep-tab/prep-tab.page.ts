@@ -23,7 +23,7 @@ export class PrepTabPage {
     </ion-content>
   `
 })
-export class SlideExample {
+export class Slide {
   // Optional parameters to pass to the swiper instance.
   // See http://idangero.us/swiper/api/ for valid options.
   slideOpts = {

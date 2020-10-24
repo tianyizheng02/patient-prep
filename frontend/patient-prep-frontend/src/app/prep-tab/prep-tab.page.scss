@@ -5,9 +5,16 @@ ion-content {
 /* Without setting height the slides will take up the height of the slide's content */
 ion-slides {
     height: 100%;
-    margin: 10%, 0;
+}
+
+h1 {
+    font-size: 16px;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 ion-button {
-    --margin: 100em;
+    width: 80%;
+    margin-left: 2em;
+    margin-right: 2em;
 }
