@@ -12,7 +12,7 @@ export class PrepTabPage {
 }
 
 @Component({
-  selector: 'slides-example',
+  selector: 'slides',
   template: `
     <ion-content>
       <ion-slides pager="true" [options]="slideOpts">

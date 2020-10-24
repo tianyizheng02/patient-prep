@@ -4,7 +4,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { PrepTabPage } from './prep-tab.page';
 
-describe('Tab3Page', () => {
+describe('PrepTabPage', () => {
   let component: PrepTabPage;
   let fixture: ComponentFixture<PrepTabPage>;
 

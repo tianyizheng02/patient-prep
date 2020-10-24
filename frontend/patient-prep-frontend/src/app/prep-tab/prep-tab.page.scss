@@ -1,8 +1,13 @@
 ion-content {
-    --ion-background-color:#000;
+    --background: linear-gradient(#8AF2E6, #19e3cb);
 }
 
 /* Without setting height the slides will take up the height of the slide's content */
 ion-slides {
     height: 100%;
+    margin: 10%, 0;
+}
+
+ion-button {
+    --margin: 100em;
 }
