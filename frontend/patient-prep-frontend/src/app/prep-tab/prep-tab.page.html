@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      patientPrep
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Prep</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <IonGrid>
+        <IonRow>
+          <h1>On average, how often do you see a doctor for any reason?</h1>
+        </IonRow>
+        <IonRow>
+          <ion-button expand="block">Once every 1-2 years</ion-button>
+        </IonRow>
+        <IonRow>
+          <ion-button expand="block">Once every 3+ years</ion-button>
+        </IonRow>
+      </IonGrid>
+    </ion-slide>
+
+    <ion-slide>
+      <IonGrid>
+        <IonRow>
+          <h1>When was the last time you visited a doctor or physician assistant<br>(excluding dentists or other healthcare workers)?</h1>
+        </IonRow>
+        <IonRow>
+          <ion-button expand="block">A Month Ago</ion-button>
+        </IonRow>
+        <IonRow>
+          <ion-button expand="block">6 Months Ago</ion-button>
+        </IonRow>
+        <IonRow>
+          <ion-button expand="block">A Year Ago</ion-button>
+        </IonRow>
+        <IonRow>
+          <ion-button expand="block">More than a Year Ago</ion-button>
+        </IonRow>
+      </IonGrid>
+    </ion-slide>
+    
+    <ion-slide>
+      <IonGrid>
+        <IonRow>
+          <h1>What is the most important thing for you to get from this visit?</h1>
+        </IonRow>
+        <IonRow>
+          <ion-button expand="block">Clarity/Closure</ion-button>
+        </IonRow>
+        <IonRow>
+          <ion-button expand="block">Medication Refill</ion-button>
+        </IonRow>
+        <IonRow>
+          <ion-button expand="block">Symptom Relief</ion-button>
+        </IonRow>
+        <IonRow>
+          <ion-button expand="block">Nothing in Particular</ion-button>
+        </IonRow>
+      </IonGrid>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
