@@ -4,8 +4,45 @@ ion-toolbar {
 
 ion-content {
     --background: #fff;
+    font-family: 'OpenSans', sans-serif;
 }
 
 ion-title {
     text-align: center;
+    font-style: bold;
+    font-size: 32px;
+}
+
+h1, p {
+    color: #000;
+    text-align: center;
+}
+
+.slogan {
+    color: #000;
+    text-align: center;
+    font-style: light;
+}
+
+.summary {
+    background-color: #ddd;
+}
+
+.summary-text {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+ion-scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 150px;
+    white-space: nowrap;
+}
+
+ion-card {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
 }
