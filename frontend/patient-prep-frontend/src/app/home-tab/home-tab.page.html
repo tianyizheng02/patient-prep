@@ -1,0 +1,54 @@
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      patientPrep
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">patientPrep</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h6 class="slogan">Helping you help yourself</h6>
+
+  <h1>Are you up to date?</h1>
+
+  <div class="summary">
+    <h1>Summary</h1>
+    <p class="summary-text">my last visit</p>
+    <p class="summary-text">my notes</p>
+  </div>
+
+  <h1>Trending</h1>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <ion-card>
+        <ion-card-content>
+          Text here
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-content>
+          Text here
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    
+    <ion-slide>
+      <ion-card>
+        <ion-card-content>
+          Text here
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
