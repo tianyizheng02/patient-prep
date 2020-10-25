@@ -13,59 +13,59 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-slides pager="true" [options]="slideOpts">
+  <ion-slides pager="true" [options]="slideOpts" #slider >
     <ion-slide>
-      <IonGrid>
-        <IonRow>
+      <ion-grid>
+        <ion-row>
           <h1>On average, how often do you see a doctor for any reason?</h1>
-        </IonRow>
-        <IonRow>
-          <ion-button expand="block">Once every 1-2 years</ion-button>
-        </IonRow>
-        <IonRow>
-          <ion-button expand="block">Once every 3+ years</ion-button>
-        </IonRow>
-      </IonGrid>
+        </ion-row>
+        <ion-row>
+          <ion-button (click)="next(slider, 'A', 1)" expand="block">Once every 1-2 years</ion-button>
+        </ion-row>
+        <ion-row>
+          <ion-button (click)="next(slider, 'A', 2)" expand="block">Once every 3+ years</ion-button>
+        </ion-row>
+      </ion-grid>
     </ion-slide>
 
     <ion-slide>
-      <IonGrid>
-        <IonRow>
+      <ion-grid>
+        <ion-row>
           <h1>When was the last time you visited a doctor or physician assistant<br>(excluding dentists or other healthcare workers)?</h1>
-        </IonRow>
-        <IonRow>
-          <ion-button expand="block">A Month Ago</ion-button>
-        </IonRow>
-        <IonRow>
-          <ion-button expand="block">6 Months Ago</ion-button>
-        </IonRow>
-        <IonRow>
-          <ion-button expand="block">A Year Ago</ion-button>
-        </IonRow>
-        <IonRow>
-          <ion-button expand="block">More than a Year Ago</ion-button>
-        </IonRow>
-      </IonGrid>
+        </ion-row>
+        <ion-row>
+          <ion-button  (click)="next(slider, 'B', 1)" expand="block">A Month Ago</ion-button>
+        </ion-row>
+        <ion-row>
+          <ion-button  (click)="next(slider, 'B', 2)" expand="block">6 Months Ago</ion-button>
+        </ion-row>
+        <ion-row>
+          <ion-button  (click)="next(slider, 'B', 3)" expand="block">A Year Ago</ion-button>
+        </ion-row>
+        <ion-row>
+          <ion-button  (click)="next(slider, 'B', 4)" expand="block">More than a Year Ago</ion-button>
+        </ion-row>
+      </ion-grid>
     </ion-slide>
     
     <ion-slide>
-      <IonGrid>
-        <IonRow>
+      <ion-grid>
+        <ion-row>
           <h1>What is the most important thing for you to get from this visit?</h1>
-        </IonRow>
-        <IonRow>
-          <ion-button expand="block">Clarity/Closure</ion-button>
-        </IonRow>
-        <IonRow>
-          <ion-button expand="block">Medication Refill</ion-button>
-        </IonRow>
-        <IonRow>
-          <ion-button expand="block">Symptom Relief</ion-button>
-        </IonRow>
-        <IonRow>
-          <ion-button expand="block">Nothing in Particular</ion-button>
-        </IonRow>
-      </IonGrid>
+        </ion-row>
+        <ion-row>
+          <ion-button  (click)="next(slider, 'C', 1)" expand="block">Clarity/Closure</ion-button>
+        </ion-row>
+        <ion-row>
+          <ion-button  (click)="next(slider, 'C', 2)" expand="block">Medication Refill</ion-button>
+        </ion-row>
+        <ion-row>
+          <ion-button  (click)="next(slider, 'C', 3)" expand="block">Symptom Relief</ion-button>
+        </ion-row>
+        <ion-row>
+          <ion-button  (click)="next(slider, 'C', 4)" expand="block">Nothing in Particular</ion-button>
+        </ion-row>
+      </ion-grid>
     </ion-slide>
   </ion-slides>
 </ion-content>
