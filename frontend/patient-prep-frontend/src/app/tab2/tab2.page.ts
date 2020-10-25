@@ -11,7 +11,8 @@ import { EventModelPage } from '../event-model/event-model.page';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  eventSource = [];
+  eventSource = []
+
   viewTitle: string;
   selectedDay = new Date();
 
@@ -20,7 +21,27 @@ export class Tab2Page {
     currentDate: new Date()
   };
 
-  constructor(public navCtrl: NavController, private modalCtrl: ModalController, private alertCtrl: AlertController) { }
+  constructor(public navCtrl: NavController, private modalCtrl: ModalController, private alertCtrl: AlertController) {
+    if (JSON.parse(localStorage.getItem("events"))) {
+
+      JSON.parse(localStorage.getItem("events")).forEach(event => {
+
+        let eventData = event;
+        eventData.startTime = new Date(event.startTime);
+        eventData.endTime = new Date(event.endTime);
+        let events = this.eventSource;
+        events.push(eventData);
+        this.eventSource = [];
+        setTimeout(() => {
+          this.eventSource = events;
+
+        });
+
+      });
+
+    }
+
+  }
 
 
 
@@ -44,6 +65,8 @@ export class Tab2Page {
       this.eventSource = [];
       setTimeout(() => {
         this.eventSource = events;
+        console.log(this.eventSource)
+        localStorage.setItem("events", JSON.stringify(this.eventSource))
       });
     }
 
@@ -55,8 +78,6 @@ export class Tab2Page {
   }
 
   async onEventSelected(event) {
-
-    console.log(event)
 
     let start = moment(event.startTime).format('LLLL');
     let end = moment(event.endTime).format('LLLL');

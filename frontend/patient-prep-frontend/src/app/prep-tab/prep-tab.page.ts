@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-prep-tab',
@@ -7,28 +8,40 @@ import { Component } from '@angular/core';
 })
 export class PrepTabPage {
 
-  constructor() {}
+  constructor(private router: Router) { }
 
-}
-
-@Component({
-  selector: 'slides',
-  template: `
-    <ion-content>
-      <ion-slides pager="true" [options]="slideOpts">
-        <ion-slide>
-          <h1>Slide</h1>
-        </ion-slide>
-      </ion-slides>
-    </ion-content>
-  `
-})
-export class Slide {
-  // Optional parameters to pass to the swiper instance.
-  // See http://idangero.us/swiper/api/ for valid options.
   slideOpts = {
-    initialSlide: 1,
+    initialSlide: 0,
     speed: 400
   };
-  constructor() {}
+
+  answers = []
+
+  next(slides, ques, ans) {
+
+    let response = {
+      'ques': ques,
+      'ans': ans,
+      'timestamp' : Date.now()
+    }
+    this.answers.push(response)
+    slides.isEnd().then((end) => {
+      if (end) {
+        console.log(this.answers)
+        setTimeout(() => {
+          this.router.navigate(['/tabs/tab1'])
+        }, 200);
+      } else {
+        slides.slideNext()
+
+      }
+
+    })
+
+
+
+  }
+
+
+
 }

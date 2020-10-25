@@ -3,7 +3,9 @@
     <ion-buttons slot="start" (click)="previousMonth()">
       <ion-icon name="chevron-back-outline"></ion-icon>
     </ion-buttons>
-    <ion-title> {{ viewTitle }} </ion-title>
+    <div class="ion-text-center">
+      <ion-title> {{ viewTitle }} </ion-title>
+    </div>
     <ion-buttons slot="end" (click)="nextMonth()">
       <ion-icon name="chevron-forward-outline"></ion-icon>
     </ion-buttons>
@@ -24,8 +26,22 @@
     allDayLabel="All Day"
     startHour="9"
     endHour="20"
+    [monthviewDisplayEventTemplate]="template"
+    [lockSwipeToPrev]="true"
   >
   </calendar>
+
+  <ng-template #template let-view="view" let-row="row" let-col="col">
+    <div [class.with-event]="view.dates[row*7+col].events.length">
+      {{view.dates[row*7+col].label}}
+      <div class="indicator-container">
+        <div
+          class="event-indicator"
+          *ngFor="let e of view.dates[row*7+col].events"
+        ></div>
+      </div>
+    </div>
+  </ng-template>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="addEvent()">
     <ion-fab-button size="small">
