@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { Router } from '@angular/router'
 
+//import { html, render } from 'lit-html';
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -22,10 +24,6 @@ export class Tab1Page {
 
   constructor(private router: Router) {}
 
-  OnChangeHeight(heightType, heightValue1, heightValue2) {
-    
-  }
-
   OnChangeWeight(weightType, weightValue) {
     if (weightType == 'kg') {
       //update profile data after conversion
@@ -41,12 +39,17 @@ export class Tab1Page {
     } else {
       this.heightValue = this.heightValue1 + "m " + this.heightValue2 + "cm";;
     }
-
-    console.log('name',this.nameValue);
-    console.log('sex',this.sexValue);
-    console.log('age',this.ageValue);
-    console.log('heightValue', this.heightValue);
-    console.log('weightValue', this.weightValue, "lbs");
+    
+    //display patient's info on screen, and transition to next screen
+    // const profileData = () => html {
+    //   <h1>Name: {{ nameValue }}</h1>
+    //   <h1>Sex: {{ sexValue }}</h1>
+    //   <h1>Age: {{ ageValue }}</h1>
+    //   <h1>Height: {{ heightValue }}</h1>
+    //   <h1>Weight: {{ weightValue }}</h1
+    // }
+    //render(profileData, document.body());
+    
   }
 }
 
@@ -56,7 +59,14 @@ export class Tab1Page {
     <ion-content>
       <ion-slides pager="true" [options]="slideOpts">
         <ion-slide>
-          <h1>Slide</h1>
+          <ion-grid>
+            <ion-row>
+              <h1>Slide</h1>
+            </ion-row>
+            <ion-row>
+              <ion-card>
+              </ion-card>
+            </ion-row>
         </ion-slide>
       </ion-slides>
     </ion-content>

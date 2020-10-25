@@ -6,6 +6,12 @@ ion-slides {
   height: 100%;
 }
 
+ion-button {
+  width: 30%;
+  margin-left: 6em;
+  margin-right: 6em;
+}
+
 #h1_1 {
   font-size: 16px;
   margin-left: 3.5em;
@@ -26,11 +32,5 @@ ion-slides {
 }
 
 #selectorNum {
-    text-align: center;
-}
-
-ion-button {
-  width: 30%;
-  margin-left: 6em;
-  margin-right: 6em;
+  text-align: center;
 }
