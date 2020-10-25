@@ -1,5 +1,13 @@
 ion-content {
-    --background: linear-gradient(#8AF2E6, #19e3cb);
+    --background: #fff;
+}
+
+ion-toolbar {
+    --background: linear-gradient(#19e3cb, #8af2e6);
+}
+
+ion-title {
+    text-align: center;
 }
 
 /* Without setting height the slides will take up the height of the slide's content */
@@ -8,6 +16,7 @@ ion-slides {
 }
 
 h1 {
+    color: #000;
     font-size: 16px;
     margin-left: 2em;
     margin-right: 2em;
