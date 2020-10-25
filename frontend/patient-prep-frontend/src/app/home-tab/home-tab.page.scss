@@ -4,16 +4,21 @@ ion-toolbar {
 
 ion-content {
     --background: #fff;
-    font-family: 'OpenSans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 ion-title {
     text-align: center;
-    font-style: bold;
+    font-weight: 600;
     font-size: 32px;
 }
 
-h1, p {
+h1 {
+    color: #000;
+    text-align: center;
+}
+
+p {
     color: #000;
     text-align: center;
 }
@@ -21,7 +26,8 @@ h1, p {
 .slogan {
     color: #000;
     text-align: center;
-    font-style: light;
+    font-weight: light;
+    font-size: 14px;
 }
 
 .summary {
@@ -34,15 +40,16 @@ h1, p {
     text-align: center;
 }
 
-ion-scroll {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    height: 150px;
-    white-space: nowrap;
+ion-slides {
+    height: 40%;
+}
+
+ion-slide {
+    height: 100%;
 }
 
 ion-card {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     display: inline-block;
 }

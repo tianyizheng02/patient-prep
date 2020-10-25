@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: 'home-tab',
-        loadChildren: () => import('../tab1/home-tab.module').then(m => m.HomeTabPageModule)
+        loadChildren: () => import('../home-tab/home-tab.module').then(m => m.HomeTabPageModule)
       },
       {
         path: 'tab2',
@@ -25,14 +25,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/home-tab',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/home-tab',
     pathMatch: 'full'
   }
 ];
