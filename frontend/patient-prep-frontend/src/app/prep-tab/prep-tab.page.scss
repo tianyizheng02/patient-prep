@@ -18,3 +18,10 @@ ion-button {
     margin-left: 2em;
     margin-right: 2em;
 }
+
+ion-slides {
+    --bullet-background: red;
+    --bullet-background-active: white;
+    margin: -6rem 0px !important;
+
+}
